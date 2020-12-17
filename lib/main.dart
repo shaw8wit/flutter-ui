@@ -12,27 +12,58 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var display = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(title: Text(widget.title, style: TextStyle(fontFamily: 'PlayfairDisplay'))),
-      body: Center(
-        child: Text("Sparta!!"),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      appBar: AppBar(
+        title: Text(
+          "Sparta",
+          style: TextStyle(fontFamily: 'PlayfairDisplay'),
+        ),
+      ),
+      body: Card(
+        color: Colors.lightGreenAccent,
+        margin: EdgeInsets.symmetric(
+          horizontal: display.width * 0.06,
+          vertical: display.height * 0.11,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 3,
+                child: Container(
+                  color: Colors.transparent,
+                  child: Text('${display.aspectRatio}'),
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  color: Colors.redAccent,
+                ),
+              ),
+              Expanded(
+                flex: 1,
+                child: Container(
+                  color: Colors.blueAccent,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
