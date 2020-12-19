@@ -36,7 +36,6 @@ class ArticlePreviewComponent extends StatelessWidget {
     var display = MediaQuery.of(context).size;
     bool aspect = display.aspectRatio > 1;
     return Card(
-      color: Colors.lightGreenAccent,
       margin: EdgeInsets.symmetric(
         horizontal: display.width * (aspect ? 0.22 : 0.06),
         vertical: display.height * (aspect ? 0.27 : 0.12),

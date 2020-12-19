@@ -6,7 +6,7 @@ class ImageComponent extends StatelessWidget {
     return Expanded(
       flex: 3,
       child: Container(
-        color: Colors.transparent,
+        color: Colors.greenAccent,
       ),
     );
   }
