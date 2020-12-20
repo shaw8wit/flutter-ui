@@ -6,7 +6,12 @@ class ImageComponent extends StatelessWidget {
     return Expanded(
       flex: 3,
       child: Container(
-        color: Colors.greenAccent,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/drawers.jpg'),
+            fit: BoxFit.fill,
+          ),
+        ),
       ),
     );
   }

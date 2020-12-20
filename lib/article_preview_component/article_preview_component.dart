@@ -37,8 +37,8 @@ class ArticlePreviewComponent extends StatelessWidget {
     bool aspect = display.aspectRatio > 1;
     return Card(
       margin: EdgeInsets.symmetric(
-        horizontal: display.width * (aspect ? 0.22 : 0.06),
-        vertical: display.height * (aspect ? 0.27 : 0.12),
+        horizontal: display.aspectRatio * 200 - 80,
+        vertical: display.aspectRatio * 80 + 40,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
