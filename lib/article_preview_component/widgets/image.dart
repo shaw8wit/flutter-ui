@@ -4,7 +4,7 @@ class ImageComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 3,
+      flex: 5,
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

@@ -9,7 +9,7 @@ class ArticlePreviewComponent extends StatelessWidget {
       children: [
         ImageComponent(),
         Expanded(
-          flex: 4,
+          flex: 8,
           child: Column(
             children: [
               TextComponent(),
@@ -33,12 +33,19 @@ class ArticlePreviewComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var display = MediaQuery.of(context).size;
-    bool aspect = display.aspectRatio > 1;
+    var size = MediaQuery.of(context).size.aspectRatio;
+    bool aspect = size > 1;
     return Card(
+      elevation: 10,
       margin: EdgeInsets.symmetric(
-        horizontal: display.aspectRatio * 200 - 80,
-        vertical: display.aspectRatio * 80 + 40,
+        horizontal: size *
+            (45 +
+                (size > 1.5
+                    ? 120
+                    : size > 1.25
+                        ? 65
+                        : 0)),
+        vertical: size * 70 + 40,
       ),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),

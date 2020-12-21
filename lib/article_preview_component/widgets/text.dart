@@ -4,7 +4,7 @@ class TextComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 3,
+      flex: 5,
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 25),
@@ -13,7 +13,7 @@ class TextComponent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "This is sparta so im gonna go spartan. Lets not get full of ourselves.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sapien libero, ultrices et lectus id.",
                   style: TextStyle(
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.bold,
@@ -23,7 +23,7 @@ class TextComponent extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "I don't know what the fuck im writing but ive gotta write all that i can. Just extending it a little bit. I don't know what the fuck im doing.",
+                  "Cras tincidunt tempor hendrerit. Curabitur vel lectus interdum, mollis enim non, imperdiet magna. Pellentesque placerat lobortis quam aliquet porta.",
                   style: TextStyle(
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.bold,
