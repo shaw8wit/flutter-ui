@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/article_preview_component/article_preview_component.dart';
+import 'package:flutter_ui/widgets/grid_card.dart';
 
 class Home extends StatelessWidget {
   static const routeName = '/home';
@@ -11,21 +12,32 @@ class Home extends StatelessWidget {
         title: Text("Flutter UI"),
         centerTitle: true,
       ),
-      body: GridView.count(
-        crossAxisCount: MediaQuery.of(context).size.width ~/ 200,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed(ArticlePreviewComponent.routeName);
-            },
-            child: Center(
-              child: Text("Article Preview Component"),
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: GridView.count(
+          primary: false,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          crossAxisCount: MediaQuery.of(context).size.width ~/ 180,
+          children: [
+            GridCard(
+              routeName: ArticlePreviewComponent.routeName,
+              text: "article-preview-component",
             ),
-          ),
-          Center(
-            child: Text("Sparta"),
-          ),
-        ],
+            GridCard(
+              routeName: ArticlePreviewComponent.routeName,
+              text: "dummy-component",
+            ),
+            GridCard(
+              routeName: ArticlePreviewComponent.routeName,
+              text: "dummy-component",
+            ),
+            GridCard(
+              routeName: ArticlePreviewComponent.routeName,
+              text: "dummy-component",
+            ),
+          ],
+        ),
       ),
     );
   }

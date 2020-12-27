@@ -18,7 +18,7 @@ class _ShareComponentState extends State<ShareComponent> {
         Padding(
           padding: const EdgeInsets.only(left: 12),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
@@ -30,6 +30,7 @@ class _ShareComponentState extends State<ShareComponent> {
                   fontSize: 13,
                 ),
               ),
+              const SizedBox(height: 6),
               Text(
                 "28 Jun 2020",
                 style: TextStyle(
@@ -93,28 +94,23 @@ class _ShareComponentState extends State<ShareComponent> {
             ClipOval(
               child: Material(
                 color: share ? Colors.blueGrey[300] : Colors.black12, // button color
-                child: InkWell(
-                  splashColor: Colors.teal, // inkwell color
-                  child: SizedBox(
-                    width: 30,
-                    height: 30,
-                    child: share
-                        ? Icon(
-                            Icons.close,
-                            color: Colors.white,
-                            size: 15,
-                          )
-                        : Icon(
-                            Icons.share,
-                            color: Colors.blueGrey,
-                            size: 15,
-                          ),
+                child: Tooltip(
+                  message: share ? 'Close' : 'Share',
+                  child: InkWell(
+                    splashColor: Colors.teal, // inkwell color
+                    child: SizedBox(
+                      width: 30,
+                      height: 30,
+                      child: share
+                          ? Icon(Icons.close, color: Colors.white, size: 15)
+                          : Icon(Icons.share, color: Colors.blueGrey, size: 15),
+                    ),
+                    onTap: () {
+                      setState(() {
+                        share = !share;
+                      });
+                    },
                   ),
-                  onTap: () {
-                    setState(() {
-                      share = !share;
-                    });
-                  },
                 ),
               ),
             ),

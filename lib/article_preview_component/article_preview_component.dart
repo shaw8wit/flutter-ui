@@ -52,7 +52,7 @@ class ArticlePreviewComponent extends StatelessWidget {
                       : size > 1.25
                           ? 65
                           : 0)),
-          vertical: size * 70 + 40,
+          vertical: size * 70 + 45,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
