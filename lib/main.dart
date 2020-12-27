@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/article_preview_component/article_preview_component.dart';
 
-import 'article_preview_component/article_preview_component.dart';
+import 'home.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,26 +10,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'flutter-ui',
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
+        fontFamily: 'PlayfairDisplay',
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Flutter UI",
-          style: TextStyle(fontFamily: 'PlayfairDisplay'),
-        ),
-      ),
-      body: ArticlePreviewComponent(),
+      initialRoute: Home.routeName,
+      routes: {
+        Home.routeName: (ctx) => Home(),
+        ArticlePreviewComponent.routeName: (ctx) => ArticlePreviewComponent(),
+      },
     );
   }
 }
