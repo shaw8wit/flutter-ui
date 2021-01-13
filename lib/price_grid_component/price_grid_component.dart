@@ -12,10 +12,9 @@ class PriceGridComponent extends StatelessWidget {
       IntrinsicHeight(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.max,
           children: [
-            Price(),
-            Why(),
+            Expanded(child: Price()),
+            Expanded(child: Why()),
           ],
         ),
       ),
