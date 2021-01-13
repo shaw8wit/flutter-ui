@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/article_preview_component/article_preview_component.dart';
+import 'package:flutter_ui/price_grid_component/price_grid_component.dart';
 
 import 'home.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Home.routeName: (ctx) => Home(),
         ArticlePreviewComponent.routeName: (ctx) => ArticlePreviewComponent(),
+        PriceGridComponent.routeName: (ctx) => PriceGridComponent(),
       },
     );
   }
