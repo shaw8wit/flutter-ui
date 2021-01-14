@@ -10,7 +10,9 @@ class Layout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: color,
-      padding: EdgeInsets.all((MediaQuery.of(context).size.aspectRatio > 1) ? 60 : 20),
+      padding: (MediaQuery.of(context).size.aspectRatio > 1)
+          ? EdgeInsets.symmetric(vertical: 45, horizontal: 40)
+          : EdgeInsets.symmetric(vertical: 25, horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: children,

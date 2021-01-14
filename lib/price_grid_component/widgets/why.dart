@@ -7,14 +7,72 @@ class Why extends StatelessWidget {
     return Layout(
       color: Color(0xff4ABEBD),
       children: [
-        Text("Why Us"),
-        Text("Tutorials by industry experts"),
-        Text("Peer & expert code review"),
-        Text("Coding exercises"),
-        Text("Access to our GitHub repos"),
-        Text("Community forum"),
-        Text("Flashcard decks"),
-        Text("New videos every week"),
+        Text(
+          "Why Us",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: 17,
+          ),
+        ),
+        SizedBox(height: 14),
+        Text(
+          "Tutorials by industry experts",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            fontSize: 14,
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "Peer & expert code review",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "Coding exercises",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "Access to our GitHub repos",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "Community forum",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "Flashcard decks",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
+        SizedBox(height: 6),
+        Text(
+          "New videos every week",
+          style: TextStyle(
+            fontFamily: 'Montserrat',
+            color: Colors.white,
+          ),
+        ),
       ],
     );
   }

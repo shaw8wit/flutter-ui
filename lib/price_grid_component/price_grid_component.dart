@@ -38,11 +38,18 @@ class PriceGridComponent extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(100),
-        child: Card(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: aspect ? desktop() : mobile(),
+        padding: EdgeInsets.symmetric(
+          vertical: 10 + (aspect ? MediaQuery.of(context).size.height * 0.10 : 15.0),
+          horizontal: 0,
+        ),
+        child: Center(
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: 10),
+            width: 600,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: aspect ? desktop() : mobile(),
+            ),
           ),
         ),
       ),
