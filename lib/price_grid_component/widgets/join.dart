@@ -12,20 +12,20 @@ class Join extends StatelessWidget {
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
             color: Color(0xff2FB3B1),
-            fontSize: 20,
+            fontSize: 22,
           ),
         ),
-        SizedBox(height: 14),
+        SizedBox(height: 16),
         Text(
           "30-day, hassle-free money back guarantee.",
           style: TextStyle(
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
-            color: Color(0xff4ABEBD),
+            color: Color(0xffBFDF32),
             fontSize: 17,
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 12),
         Text(
           "Gain access to our full library of tutorials along with expert code reviews.",
           style: TextStyle(

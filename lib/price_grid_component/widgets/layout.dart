@@ -15,6 +15,7 @@ class Layout extends StatelessWidget {
           : EdgeInsets.symmetric(vertical: 25, horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: children,
       ),
     );

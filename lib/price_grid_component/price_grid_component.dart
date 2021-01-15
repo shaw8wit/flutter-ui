@@ -33,22 +33,36 @@ class PriceGridComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final aspect = MediaQuery.of(context).size.aspectRatio > 1;
     return Scaffold(
+      backgroundColor: Colors.blueGrey[200].withOpacity(0.4),
       appBar: AppBar(
         title: Text("Price Grid Component"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
-          vertical: 10 + (aspect ? MediaQuery.of(context).size.height * 0.10 : 15.0),
-          horizontal: 0,
+          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 36 : 25.0,
         ),
         child: Center(
           child: Container(
             margin: EdgeInsets.symmetric(horizontal: 10),
-            width: 600,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: aspect ? desktop() : mobile(),
+            width: 650,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(8)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.blueGrey[200],
+                  spreadRadius: 0,
+                  blurRadius: 20,
+                  offset: Offset(0, 10),
+                ),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: aspect ? desktop() : mobile(),
+              ),
             ),
           ),
         ),

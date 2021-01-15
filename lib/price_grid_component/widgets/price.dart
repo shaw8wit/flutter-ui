@@ -15,7 +15,7 @@ class Price extends StatelessWidget {
             fontSize: 17,
           ),
         ),
-        SizedBox(height: 14),
+        SizedBox(height: 16),
         Row(
           children: [
             Text(
@@ -24,7 +24,7 @@ class Price extends StatelessWidget {
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
-                fontSize: 22,
+                fontSize: 25,
               ),
             ),
             SizedBox(width: 10),
@@ -47,8 +47,21 @@ class Price extends StatelessWidget {
         ),
         SizedBox(height: 14),
         FlatButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(6),
+          ),
+          minWidth: double.infinity,
+          textColor: Colors.white,
+          padding: EdgeInsets.all(20),
+          color: Color(0xffBFDF32),
           onPressed: () {},
-          child: Text("Sign Up"),
+          child: Text(
+            "Sign Up",
+            style: TextStyle(
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
       ],
       color: Color(0xff2FB3B1),

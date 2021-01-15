@@ -16,7 +16,7 @@ class Why extends StatelessWidget {
             fontSize: 17,
           ),
         ),
-        SizedBox(height: 14),
+        SizedBox(height: 16),
         Text(
           "Tutorials by industry experts",
           style: TextStyle(
@@ -25,7 +25,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "Peer & expert code review",
           style: TextStyle(
@@ -33,7 +33,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "Coding exercises",
           style: TextStyle(
@@ -41,7 +41,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "Access to our GitHub repos",
           style: TextStyle(
@@ -49,7 +49,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "Community forum",
           style: TextStyle(
@@ -57,7 +57,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "Flashcard decks",
           style: TextStyle(
@@ -65,7 +65,7 @@ class Why extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        SizedBox(height: 6),
+        SizedBox(height: 3),
         Text(
           "New videos every week",
           style: TextStyle(
