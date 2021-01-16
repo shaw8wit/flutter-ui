@@ -40,7 +40,7 @@ class PriceGridComponent extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
-          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 36 : 25.0,
+          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
         ),
         child: Center(
           child: Container(
