@@ -33,7 +33,7 @@ class PriceGridComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final aspect = MediaQuery.of(context).size.aspectRatio > 1;
     return Scaffold(
-      backgroundColor: Colors.blueGrey[200].withOpacity(0.4),
+      backgroundColor: Colors.blueGrey[50],
       appBar: AppBar(
         title: Text("Price Grid Component"),
         centerTitle: true,

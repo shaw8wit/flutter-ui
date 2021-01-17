@@ -1,19 +1,49 @@
 import 'package:flutter/material.dart';
 
 class LayoutTwo extends StatelessWidget {
-  final String heading, details, imgPath;
+  final String heading, details, imgName;
 
-  LayoutTwo({this.heading, this.details, this.imgPath});
+  LayoutTwo({this.heading, this.details, this.imgName});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 300),
+      color: Colors.tealAccent[100],
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(25),
+      constraints: BoxConstraints(maxWidth: 350, minHeight: 200),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(heading),
-          Text(details),
-          Text(imgPath),
+          Column(
+            children: [
+              Text(
+                heading,
+                style: TextStyle(
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 22,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                details,
+                style: TextStyle(fontFamily: 'Lato'),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Image(
+                image: AssetImage('assets/images/$imgName'),
+                width: 50,
+                height: 50,
+              ),
+            ],
+          ),
         ],
       ),
     );

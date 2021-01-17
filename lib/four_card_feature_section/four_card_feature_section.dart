@@ -9,16 +9,15 @@ class FourCardFeatureSection extends StatelessWidget {
     return LayoutTwo(
       heading: 'Supervisor',
       details: 'Monitors activity to identify project roadblocks',
-      imgPath: 'dummy',
+      imgName: 'icon-supervisor.png',
     );
   }
 
   Widget getTeamBuilder() {
     return LayoutTwo(
       heading: 'Team Builder',
-      details:
-          'Scans our talent network to create the optimal team for your project',
-      imgPath: 'dummy',
+      details: 'Scans our talent network to create the optimal team for your project',
+      imgName: 'icon-team-builder.png',
     );
   }
 
@@ -26,31 +25,32 @@ class FourCardFeatureSection extends StatelessWidget {
     return LayoutTwo(
       heading: 'Karma',
       details: 'Regularly evaluates our talent to ensure quality',
-      imgPath: 'dummy',
+      imgName: 'icon-karma.png',
     );
   }
 
   Widget getCalculator() {
     return LayoutTwo(
       heading: 'Calculator',
-      details:
-          'Uses data from past projects to provide better delivery estimates',
-      imgPath: 'dummy',
+      details: 'Uses data from past projects to provide better delivery estimates',
+      imgName: 'icon-calculator.png',
     );
   }
 
   Widget landscape() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        getSupervisor(),
-        Column(
-          children: [
-            getTeamBuilder(),
-            getKarma(),
-          ],
+        Expanded(child: getSupervisor()),
+        Expanded(
+          child: Column(
+            children: [
+              getTeamBuilder(),
+              getKarma(),
+            ],
+          ),
         ),
-        getCalculator(),
+        Expanded(child: getCalculator()),
       ],
     );
   }
@@ -77,7 +77,7 @@ class FourCardFeatureSection extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            color: Colors.red,
+            color: Color(0xffFAFAFA),
             constraints: BoxConstraints(maxWidth: 1200),
             padding: EdgeInsets.all(aspect ? 50 : 20),
             child: Column(
