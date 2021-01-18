@@ -10,6 +10,7 @@ class FourCardFeatureSection extends StatelessWidget {
       heading: 'Supervisor',
       details: 'Monitors activity to identify project roadblocks',
       imgName: 'icon-supervisor.png',
+      color: Colors.tealAccent,
     );
   }
 
@@ -18,6 +19,7 @@ class FourCardFeatureSection extends StatelessWidget {
       heading: 'Team Builder',
       details: 'Scans our talent network to create the optimal team for your project',
       imgName: 'icon-team-builder.png',
+      color: Colors.redAccent,
     );
   }
 
@@ -26,6 +28,7 @@ class FourCardFeatureSection extends StatelessWidget {
       heading: 'Karma',
       details: 'Regularly evaluates our talent to ensure quality',
       imgName: 'icon-karma.png',
+      color: Colors.yellowAccent,
     );
   }
 
@@ -34,6 +37,7 @@ class FourCardFeatureSection extends StatelessWidget {
       heading: 'Calculator',
       details: 'Uses data from past projects to provide better delivery estimates',
       imgName: 'icon-calculator.png',
+      color: Colors.blueAccent,
     );
   }
 
@@ -79,7 +83,7 @@ class FourCardFeatureSection extends StatelessWidget {
           child: Container(
             color: Color(0xffFAFAFA),
             constraints: BoxConstraints(maxWidth: 1200),
-            padding: EdgeInsets.all(aspect ? 50 : 20),
+            padding: EdgeInsets.all(aspect ? 50 : 5),
             child: Column(
               children: [
                 Head(),

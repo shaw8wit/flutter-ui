@@ -6,7 +6,7 @@ class Head extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 450, minHeight: 140),
       margin: EdgeInsets.only(bottom: 30),
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.all(10),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -15,17 +15,21 @@ class Head extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.w300,
-              fontSize: 24,
+              fontSize: 25,
             ),
+            textAlign: TextAlign.center,
           ),
+          SizedBox(height: 10),
           Text(
             "Powered by Technology",
             style: TextStyle(
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.w600,
-              fontSize: 24,
+              fontSize: 25,
             ),
+            textAlign: TextAlign.center,
           ),
+          SizedBox(height: 10),
           Text(
             "Out Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful",
             style: TextStyle(fontFamily: 'Lato', fontSize: 16),
