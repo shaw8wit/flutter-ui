@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/article_preview_component/widgets/image.dart';
-import 'package:flutter_ui/article_preview_component/widgets/share.dart';
-import 'package:flutter_ui/article_preview_component/widgets/text.dart';
+
+import 'widgets/image.dart';
+import 'widgets/share.dart';
+import 'widgets/text.dart';
 
 class ArticlePreviewComponent extends StatelessWidget {
   static const routeName = '/articlePreviewComponent';

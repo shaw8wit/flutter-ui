@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LayoutTwo extends StatelessWidget {
   final String heading, details, imgName;
-  Color color;
+  final Color color;
 
   LayoutTwo({this.heading, this.details, this.imgName, this.color});
 

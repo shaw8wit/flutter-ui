@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/intro_signup_component/widgets/intro.dart';
-import 'package:flutter_ui/intro_signup_component/widgets/signup.dart';
+
+import 'widgets/intro.dart';
+import 'widgets/signup.dart';
 
 class IntroSignupComponent extends StatelessWidget {
   static const routeName = '/introSignupComponent';

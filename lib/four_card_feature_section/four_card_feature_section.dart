@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/four_card_feature_section/widgets/head.dart';
-import 'package:flutter_ui/four_card_feature_section/widgets/layout_two.dart';
+
+import 'widgets/head.dart';
+import 'widgets/layout_two.dart';
 
 class FourCardFeatureSection extends StatelessWidget {
   static const routeName = '/fourCardFeatureSection';
@@ -17,7 +18,8 @@ class FourCardFeatureSection extends StatelessWidget {
   Widget getTeamBuilder() {
     return LayoutTwo(
       heading: 'Team Builder',
-      details: 'Scans our talent network to create the optimal team for your project',
+      details:
+          'Scans our talent network to create the optimal team for your project',
       imgName: 'icon-team-builder.png',
       color: Colors.redAccent,
     );
@@ -35,7 +37,8 @@ class FourCardFeatureSection extends StatelessWidget {
   Widget getCalculator() {
     return LayoutTwo(
       heading: 'Calculator',
-      details: 'Uses data from past projects to provide better delivery estimates',
+      details:
+          'Uses data from past projects to provide better delivery estimates',
       imgName: 'icon-calculator.png',
       color: Colors.blueAccent,
     );

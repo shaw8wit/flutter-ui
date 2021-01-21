@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/price_grid_component/widgets/layout.dart';
+import 'layout.dart';
 
 class Join extends StatelessWidget {
   @override

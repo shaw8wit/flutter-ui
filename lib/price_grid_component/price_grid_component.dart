@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/price_grid_component/widgets/join.dart';
-import 'package:flutter_ui/price_grid_component/widgets/price.dart';
-import 'package:flutter_ui/price_grid_component/widgets/why.dart';
+import 'widgets/join.dart';
+import 'widgets/price.dart';
+import 'widgets/why.dart';
 
 class PriceGridComponent extends StatelessWidget {
   static const routeName = '/priceGridComponent';
@@ -40,7 +40,8 @@ class PriceGridComponent extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
-          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
+          vertical:
+              aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
         ),
         child: Center(
           child: Container(

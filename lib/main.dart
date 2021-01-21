@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/article_preview_component/article_preview_component.dart';
-import 'package:flutter_ui/four_card_feature_section/four_card_feature_section.dart';
-import 'package:flutter_ui/intro_signup_component/intro_signup_component.dart';
-import 'package:flutter_ui/price_grid_component/price_grid_component.dart';
 
+import 'article_preview_component/article_preview_component.dart';
+import 'four_card_feature_section/four_card_feature_section.dart';
 import 'home.dart';
+import 'intro_signup_component/intro_signup_component.dart';
+import 'price_grid_component/price_grid_component.dart';
 
 void main() => runApp(MyApp());
 
