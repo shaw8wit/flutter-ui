@@ -9,8 +9,9 @@ class IntroSignupComponent extends StatelessWidget {
   Widget horizontal() {
     return Row(
       children: [
-        Intro(),
-        Signup(),
+        Expanded(child: Intro()),
+        SizedBox(width: 20),
+        Expanded(child: Signup()),
       ],
     );
   }
@@ -35,13 +36,11 @@ class IntroSignupComponent extends StatelessWidget {
       appBar: appBar,
       body: SingleChildScrollView(
         child: Container(
-          constraints: BoxConstraints(
-            minHeight: size.height - appBar.preferredSize.height,
-            minWidth: size.width,
-          ),
+          width: size.width,
+          constraints: BoxConstraints(minHeight: size.height - appBar.preferredSize.height),
           padding: EdgeInsets.symmetric(
-            vertical: size.height * 0.05,
-            horizontal: size.width * 0.05,
+            vertical: size.height * 0.08,
+            horizontal: size.width * 0.08,
           ),
           decoration: BoxDecoration(
             color: Colors.redAccent[100],
@@ -52,7 +51,7 @@ class IntroSignupComponent extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: size.aspectRatio > 0.9 ? horizontal() : vertical(),
+          child: size.aspectRatio > 1 ? horizontal() : vertical(),
         ),
       ),
     );
