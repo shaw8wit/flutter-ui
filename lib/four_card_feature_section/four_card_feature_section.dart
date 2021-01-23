@@ -18,8 +18,7 @@ class FourCardFeatureSection extends StatelessWidget {
   Widget getTeamBuilder() {
     return LayoutTwo(
       heading: 'Team Builder',
-      details:
-          'Scans our talent network to create the optimal team for your project',
+      details: 'Scans our talent network to create the optimal team for your project',
       imgName: 'icon-team-builder.png',
       color: Colors.redAccent,
     );
@@ -37,8 +36,7 @@ class FourCardFeatureSection extends StatelessWidget {
   Widget getCalculator() {
     return LayoutTwo(
       heading: 'Calculator',
-      details:
-          'Uses data from past projects to provide better delivery estimates',
+      details: 'Uses data from past projects to provide better delivery estimates',
       imgName: 'icon-calculator.png',
       color: Colors.blueAccent,
     );
@@ -78,6 +76,7 @@ class FourCardFeatureSection extends StatelessWidget {
     final aspect = MediaQuery.of(context).size.aspectRatio > 1.2;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orangeAccent,
         title: Text("Four Card Feature Section"),
         centerTitle: true,
       ),

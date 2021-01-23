@@ -40,7 +40,11 @@ class ArticlePreviewComponent extends StatelessWidget {
     bool aspect = size > 1;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Article Preview Component"),
+        title: Text(
+          "Article Preview Component",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blueGrey,
         centerTitle: true,
       ),
       body: Card(

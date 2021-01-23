@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'widgets/join.dart';
 import 'widgets/price.dart';
 import 'widgets/why.dart';
@@ -35,13 +36,13 @@ class PriceGridComponent extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
       appBar: AppBar(
+        backgroundColor: Color(0xffBFDF32),
         title: Text("Price Grid Component"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(
-          vertical:
-              aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
+          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
         ),
         child: Center(
           child: Container(

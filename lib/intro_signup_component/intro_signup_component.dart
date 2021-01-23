@@ -33,7 +33,11 @@ class IntroSignupComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     final appBar = AppBar(
-      title: Text('Intro Signup Component'),
+      backgroundColor: Color(0xffF97877),
+      title: Text(
+        'Intro Signup Component',
+        style: TextStyle(color: Colors.white),
+      ),
       centerTitle: true,
     );
     return Scaffold(
