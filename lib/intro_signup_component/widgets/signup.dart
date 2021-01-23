@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/intro_signup_component/widgets/input_field_signup.dart';
+import 'input_field_signup.dart';
 
 class Signup extends StatefulWidget {
   final bool center;
@@ -58,7 +58,8 @@ class _SignupState extends State<Signup> {
                     ),
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Processing Data')));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text('Processing Data')));
                         _formKey.currentState.reset();
                       }
                     },
