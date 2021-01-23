@@ -7,20 +7,24 @@ class IntroSignupComponent extends StatelessWidget {
   static const routeName = '/introSignupComponent';
 
   Widget horizontal() {
-    return Row(
-      children: [
-        Expanded(child: Intro()),
-        SizedBox(width: 20),
-        Expanded(child: Signup()),
-      ],
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 40),
+      child: Row(
+        children: [
+          Expanded(child: Intro(false)),
+          SizedBox(width: 25),
+          Expanded(child: Signup(false)),
+        ],
+      ),
     );
   }
 
   Widget vertical() {
     return Column(
       children: [
-        Intro(),
-        Signup(),
+        Intro(true),
+        SizedBox(height: 32),
+        Signup(true),
       ],
     );
   }
@@ -39,11 +43,11 @@ class IntroSignupComponent extends StatelessWidget {
           width: size.width,
           constraints: BoxConstraints(minHeight: size.height - appBar.preferredSize.height),
           padding: EdgeInsets.symmetric(
-            vertical: size.height * 0.08,
-            horizontal: size.width * 0.08,
+            vertical: size.height * 0.06,
+            horizontal: size.width * 0.06,
           ),
           decoration: BoxDecoration(
-            color: Colors.redAccent[100],
+            color: Color(0xffF97877),
             image: DecorationImage(
               image: size.aspectRatio > 0.6
                   ? AssetImage('assets/images/bg-intro-desktop.png')
@@ -51,7 +55,7 @@ class IntroSignupComponent extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: size.aspectRatio > 1 ? horizontal() : vertical(),
+          child: size.aspectRatio > 1.1 ? horizontal() : vertical(),
         ),
       ),
     );
