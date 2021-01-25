@@ -44,7 +44,7 @@ class ArticlePreviewComponent extends StatelessWidget {
           "Article Preview Component",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.grey[600],
         centerTitle: true,
       ),
       body: Card(

@@ -15,8 +15,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'flutter-ui',
       theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
+        primarySwatch: Colors.blueGrey,
         fontFamily: 'PlayfairDisplay',
+        dialogBackgroundColor: Colors.blueGrey.shade200,
       ),
       initialRoute: Home.routeName,
       routes: {
