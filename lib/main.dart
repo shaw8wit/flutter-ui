@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/social_proof_section/social_proof_section.dart';
 
 import 'article_preview_component/article_preview_component.dart';
 import 'four_card_feature_section/four_card_feature_section.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         Home.routeName: (ctx) => Home(),
         PriceGridComponent.routeName: (ctx) => PriceGridComponent(),
+        SocialProofSection.routeName: (ctx) => SocialProofSection(),
         IntroSignupComponent.routeName: (ctx) => IntroSignupComponent(),
         FourCardFeatureSection.routeName: (ctx) => FourCardFeatureSection(),
         ArticlePreviewComponent.routeName: (ctx) => ArticlePreviewComponent(),

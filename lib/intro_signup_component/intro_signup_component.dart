@@ -34,10 +34,7 @@ class IntroSignupComponent extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     final appBar = AppBar(
       backgroundColor: Color(0xffF97877),
-      title: Text(
-        'Intro Signup Component',
-        style: TextStyle(color: Colors.white),
-      ),
+      title: Text('Intro Signup Component'),
       centerTitle: true,
     );
     return Scaffold(
