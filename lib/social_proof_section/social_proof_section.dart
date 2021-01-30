@@ -11,13 +11,19 @@ class SocialProofSection extends StatelessWidget {
       children: [
         Row(
           children: [
-            Description(),
-            Column(
-              children: [
-                Rating(),
-                Rating(),
-                Rating(),
-              ],
+            Expanded(flex: 2, child: Description(false)),
+            Expanded(
+              flex: 3,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Column(
+                  children: [
+                    Rating(false, MainAxisAlignment.start, "Reviews"),
+                    Rating(false, MainAxisAlignment.center, "Report Guru"),
+                    Rating(false, MainAxisAlignment.end, "BestTech"),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
@@ -27,7 +33,7 @@ class SocialProofSection extends StatelessWidget {
             Review(),
             Review(),
           ],
-        )
+        ),
       ],
     );
   }
@@ -35,10 +41,11 @@ class SocialProofSection extends StatelessWidget {
   Widget vertical() {
     return Column(
       children: [
-        Description(),
-        Rating(),
-        Rating(),
-        Rating(),
+        Description(true),
+        SizedBox(height: 12),
+        Rating(true, MainAxisAlignment.center, "Reviews"),
+        Rating(true, MainAxisAlignment.center, "Report Guru"),
+        Rating(true, MainAxisAlignment.center, "BestTech"),
         Review(),
         Review(),
         Review(),
@@ -49,6 +56,7 @@ class SocialProofSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final mul = size.aspectRatio > 1.1 ? 0.12 : 0.05;
     final appBar = AppBar(
       title: Text("Social Proof Section"),
       centerTitle: true,
@@ -61,8 +69,8 @@ class SocialProofSection extends StatelessWidget {
           width: size.width,
           constraints: BoxConstraints(minHeight: size.height - appBar.preferredSize.height),
           padding: EdgeInsets.symmetric(
-            vertical: size.height * 0.06,
-            horizontal: size.width * 0.06,
+            vertical: size.height * mul,
+            horizontal: size.width * mul,
           ),
           child: size.aspectRatio > 1.2 ? horizontal() : vertical(),
         ),
