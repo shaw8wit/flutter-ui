@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui/social_proof_section/widgets/description.dart';
 import 'package:flutter_ui/social_proof_section/widgets/rating.dart';
-import 'package:flutter_ui/social_proof_section/widgets/review.dart';
+
+import './widgets/review_constants.dart' as rc;
 
 class SocialProofSection extends StatelessWidget {
   static const routeName = '/socialProofSection';
@@ -18,9 +19,9 @@ class SocialProofSection extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 50),
                 child: Column(
                   children: [
-                    Rating(false, MainAxisAlignment.start, "Reviews"),
-                    Rating(false, MainAxisAlignment.center, "Report Guru"),
-                    Rating(false, MainAxisAlignment.end, "BestTech"),
+                    Rating(align: MainAxisAlignment.start, name: "Reviews"),
+                    Rating(name: "Report Guru"),
+                    Rating(align: MainAxisAlignment.end, name: "BestTech"),
                   ],
                 ),
               ),
@@ -29,9 +30,9 @@ class SocialProofSection extends StatelessWidget {
         ),
         Row(
           children: [
-            Review(),
-            Review(),
-            Review(),
+            Expanded(child: rc.a),
+            Expanded(child: rc.b),
+            Expanded(child: rc.c),
           ],
         ),
       ],
@@ -43,12 +44,12 @@ class SocialProofSection extends StatelessWidget {
       children: [
         Description(true),
         SizedBox(height: 12),
-        Rating(true, MainAxisAlignment.center, "Reviews"),
-        Rating(true, MainAxisAlignment.center, "Report Guru"),
-        Rating(true, MainAxisAlignment.center, "BestTech"),
-        Review(),
-        Review(),
-        Review(),
+        Rating(name: "Reviews"),
+        Rating(name: "Report Guru"),
+        Rating(name: "BestTech"),
+        rc.a,
+        rc.b,
+        rc.c,
       ],
     );
   }

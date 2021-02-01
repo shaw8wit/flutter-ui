@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Rating extends StatelessWidget {
-  final bool mobile;
   final align;
   final String name;
 
-  Rating(this.mobile, this.align, this.name);
+  Rating({this.align = MainAxisAlignment.center, this.name});
 
   Widget horizontal() {
     return Row(
@@ -43,6 +42,8 @@ class Rating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final aspect = MediaQuery.of(context).size.aspectRatio;
+    bool mobile = aspect < 1.4 && aspect > 1.2 || aspect < 0.7;
     return Container(
       child: Row(
         mainAxisAlignment: align,
