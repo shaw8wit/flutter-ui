@@ -9,6 +9,67 @@ class Review extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 36, horizontal: 30),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(8)),
+        color: Color(0xff512750),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundImage: AssetImage('assets/images/$image'),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Montserrat',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      "Verified Buyer",
+                      style: TextStyle(
+                        color: Colors.deepPurpleAccent[100],
+                        fontFamily: 'Montserrat',
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 20),
+          Text(
+            '"$review"',
+            style: TextStyle(
+              color: Colors.white70,
+              fontFamily: 'Montserrat',
+              fontSize: 13,
+              fontWeight: FontWeight.w600,
+              height: 1.4,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

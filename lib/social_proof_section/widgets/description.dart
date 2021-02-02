@@ -24,7 +24,7 @@ class Description extends StatelessWidget {
         Text(
           "We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.",
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 17,
             color: Color(0xff512750),
             fontFamily: 'Lato',
             height: 1.6,

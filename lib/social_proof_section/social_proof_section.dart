@@ -28,12 +28,30 @@ class SocialProofSection extends StatelessWidget {
             ),
           ],
         ),
-        Row(
-          children: [
-            Expanded(child: rc.a),
-            Expanded(child: rc.b),
-            Expanded(child: rc.c),
-          ],
+        Container(
+          margin: const EdgeInsets.only(top: 48),
+          height: 320,
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(children: [rc.a]),
+              ),
+              SizedBox(width: 20),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [rc.b],
+                ),
+              ),
+              SizedBox(width: 20),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [rc.c],
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
@@ -43,12 +61,15 @@ class SocialProofSection extends StatelessWidget {
     return Column(
       children: [
         Description(true),
-        SizedBox(height: 12),
+        SizedBox(height: 18),
         Rating(name: "Reviews"),
         Rating(name: "Report Guru"),
         Rating(name: "BestTech"),
+        SizedBox(height: 18),
         rc.a,
+        SizedBox(height: 12),
         rc.b,
+        SizedBox(height: 12),
         rc.c,
       ],
     );
@@ -57,7 +78,7 @@ class SocialProofSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final mul = size.aspectRatio > 1.1 ? 0.12 : 0.05;
+    final mul = size.aspectRatio > 1 ? 0.1 : 0.05;
     final appBar = AppBar(
       title: Text("Social Proof Section"),
       centerTitle: true,
