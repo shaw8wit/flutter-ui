@@ -85,7 +85,10 @@ class FourCardFeatureSection extends StatelessWidget {
           child: Container(
             color: Color(0xffFAFAFA),
             constraints: BoxConstraints(maxWidth: 1200),
-            padding: EdgeInsets.all(aspect ? 50 : 5),
+            padding: EdgeInsets.symmetric(
+              vertical: aspect ? 42 : 36,
+              horizontal: aspect ? 40 : 6,
+            ),
             child: Column(
               children: [
                 Head(),

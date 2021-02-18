@@ -32,38 +32,41 @@ class PriceGridComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final aspect = MediaQuery.of(context).size.aspectRatio > 1;
+    final size = MediaQuery.of(context).size;
+    final aspect = size.aspectRatio > 1;
+    final appBar = AppBar(
+      backgroundColor: Color(0xffBFDF32),
+      title: Text("Price Grid Component"),
+      centerTitle: true,
+    );
     return Scaffold(
       backgroundColor: Colors.blueGrey[50],
-      appBar: AppBar(
-        backgroundColor: Color(0xffBFDF32),
-        title: Text("Price Grid Component"),
-        centerTitle: true,
-      ),
+      appBar: appBar,
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(
-          vertical: aspect ? MediaQuery.of(context).size.height * 0.15 - 30 : 25.0,
-        ),
-        child: Center(
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            width: 650,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(8)),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.blueGrey[200],
-                  spreadRadius: 0,
-                  blurRadius: 20,
-                  offset: Offset(0, 10),
+        child: Container(
+          width: size.width,
+          constraints: BoxConstraints(minHeight: size.height - appBar.preferredSize.height),
+          child: Center(
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 18, vertical: 22),
+              width: 650,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blueGrey[200],
+                    spreadRadius: 0,
+                    blurRadius: 20,
+                    offset: Offset(0, 10),
+                  ),
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: aspect ? desktop() : mobile(),
                 ),
-              ],
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: aspect ? desktop() : mobile(),
               ),
             ),
           ),

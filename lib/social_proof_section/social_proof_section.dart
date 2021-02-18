@@ -30,7 +30,7 @@ class SocialProofSection extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.only(top: 48),
-          height: 320,
+          height: 380,
           child: Row(
             children: [
               Expanded(

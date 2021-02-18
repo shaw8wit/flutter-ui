@@ -42,8 +42,8 @@ class Rating extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final aspect = MediaQuery.of(context).size.aspectRatio;
-    bool mobile = aspect < 1.4 && aspect > 1.2 || aspect < 0.7;
+    final size = MediaQuery.of(context).size.width;
+    bool mobile = size < 900 && size > 540 || size < 400;
     return Container(
       child: Row(
         mainAxisAlignment: align,
