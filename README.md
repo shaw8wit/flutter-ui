@@ -16,10 +16,32 @@ A Flutter project for implementing various responsive UI's in flutter for web, d
 
 ### Available UI's
 
-+ Article Preview Component.
-+ Price Grid Component.
-+ Four Card Feature Section.
-+ Intro Signup Component.
+<details>
+    <summary>Article Preview Component</summary>
+    <img src="screenshots/article.png">
+</details>
 
+<details>
+    <summary>Price Grid Component</summary>
+    <img src="screenshots/price.png">
+</details>
+
+<details>
+    <summary>Four Card Feature Section</summary>
+    <img src="screenshots/four.png">
+</details>
+
+<details>
+    <summary>Intro Signup Component</summary>
+    <img src="screenshots/signup.png">
+</details>
+
+<details>
+    <summary>Social Proof Section</summary>
+    <img src="screenshots/social.png">
+</details>
+
+
+<br>
 
 #### UI Designs from [Frontend Mentor](https://www.frontendmentor.io/)
