@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/social_proof_section/widgets/description.dart';
-import 'package:flutter_ui/social_proof_section/widgets/rating.dart';
 
-import './widgets/review_constants.dart' as rc;
+import 'widgets/description.dart';
+import 'widgets/rating.dart';
+import 'widgets/review_constants.dart' as rc;
 
 class SocialProofSection extends StatelessWidget {
   static const routeName = '/socialProofSection';
@@ -89,7 +89,8 @@ class SocialProofSection extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           width: size.width,
-          constraints: BoxConstraints(minHeight: size.height - appBar.preferredSize.height),
+          constraints: BoxConstraints(
+              minHeight: size.height - appBar.preferredSize.height),
           padding: EdgeInsets.symmetric(
             vertical: size.height * mul,
             horizontal: size.width * mul,

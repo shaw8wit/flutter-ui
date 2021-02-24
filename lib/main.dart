@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/social_proof_section/social_proof_section.dart';
+import 'social_proof_section/social_proof_section.dart';
 
 import 'article_preview_component/article_preview_component.dart';
 import 'four_card_feature_section/four_card_feature_section.dart';
