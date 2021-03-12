@@ -42,6 +42,4 @@ A Flutter project for implementing various responsive UI's in flutter for web, d
 </details>
 
 
-<br>
-
 #### UI Designs from [Frontend Mentor](https://www.frontendmentor.io/)
